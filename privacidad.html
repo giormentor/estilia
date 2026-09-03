@@ -3,207 +3,479 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aviso de Privacidad — EstilIA</title>
+<title>Política de Privacidad — EstilIA</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --mauve:#5D4B5F; --gold:#C4A46B; --ink:#1E1520;
-    --nude:#E8DDD4; --ivory:#FAF7F4; --blush:#C9A99A;
+  :root {
+    --mauve:  #5D4B5F;
+    --plum:   #3D2B3D;
+    --gold:   #C4A46B;
+    --blush:  #C9A99A;
+    --nude:   #E8DDD4;
+    --ivory:  #FAF7F4;
+    --ink:    #1E1520;
+    --card:   #2A1F2B;
+    --muted:  #9A8A96;
+    --text:   #F0E9EC;
   }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    background:var(--ivory); color:var(--ink); line-height:1.7;
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--ink);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
   }
-  header{
-    background:var(--mauve); color:var(--ivory);
-    padding:56px 24px 40px; text-align:center;
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(ellipse at 12% 8%, rgba(93,75,95,0.35) 0%, transparent 55%),
+      radial-gradient(ellipse at 88% 85%, rgba(201,169,154,0.08) 0%, transparent 55%);
+    pointer-events: none;
+    z-index: 0;
   }
-  header .eyebrow{
-    font-family:"Courier New",monospace; font-size:11px;
-    letter-spacing:.35em; color:var(--gold); margin-bottom:14px;
+
+  /* HEADER */
+  header {
+    position: relative;
+    z-index: 1;
+    padding: 56px 24px 44px;
+    text-align: center;
+    border-bottom: 1px solid rgba(196,164,107,0.15);
   }
-  header h1{font-size:30px; font-weight:400; margin-bottom:10px}
-  header p{font-size:13px; color:rgba(232,221,212,.7)}
-  .bar{height:3px;background:linear-gradient(90deg,var(--gold),var(--nude),var(--gold))}
-  main{max-width:760px; margin:0 auto; padding:40px 24px 64px}
-  h2{
-    font-size:19px; font-weight:600; color:var(--mauve);
-    margin:36px 0 12px; padding-bottom:8px;
-    border-bottom:1px solid rgba(196,164,107,.35);
+
+  .logo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    margin-bottom: 18px;
   }
-  h3{font-size:15px; font-weight:600; margin:20px 0 8px}
-  p,li{font-size:15px; margin-bottom:10px}
-  ul{padding-left:22px}
-  a{color:var(--mauve)}
-  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14px}
-  th,td{border:1px solid rgba(93,75,95,.2); padding:9px 11px; text-align:left; vertical-align:top}
-  th{background:var(--nude); font-weight:600}
-  .box{
-    background:#fff; border-left:3px solid var(--gold);
-    padding:16px 18px; margin:20px 0; font-size:14px;
+
+  .header-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text);
+    margin-bottom: 12px;
   }
-  footer{
-    background:var(--ink); color:rgba(232,221,212,.6);
-    text-align:center; padding:28px 24px; font-size:13px; margin-top:48px;
+
+  .header-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .header-meta span { color: var(--blush); }
+
+  /* CONTENT */
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  /* INTRO */
+  .intro-box {
+    background: rgba(93,75,95,0.28);
+    border: 1px solid rgba(196,164,107,0.2);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 48px;
+  }
+
+  .intro-box p {
+    font-size: 15px;
+    color: rgba(240,233,236,0.85);
+    line-height: 1.75;
+  }
+
+  /* SECTIONS */
+  .section { margin-bottom: 40px; }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .section-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--gold);
+    flex-shrink: 0;
+    letter-spacing: 0.1em;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--text);
+  }
+
+  .section-body {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 14px;
+    padding: 26px 30px;
+  }
+
+  .section-body p {
+    font-size: 14px;
+    color: rgba(240,233,236,0.78);
+    line-height: 1.85;
+    margin-bottom: 14px;
+  }
+
+  .section-body p:last-child { margin-bottom: 0; }
+
+  .section-body ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 12px 0;
+  }
+
+  .section-body ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: rgba(240,233,236,0.78);
+    line-height: 1.7;
+  }
+
+  .section-body ul li::before {
+    content: '—';
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .highlight { color: var(--blush); font-weight: 500; }
+  .highlight-gold { color: var(--gold); font-weight: 500; }
+
+  .note {
+    border-left: 2px solid var(--gold);
+    padding-left: 16px;
+    margin-top: 18px;
+    font-size: 13.5px;
+    color: rgba(240,233,236,0.7);
+  }
+
+  /* TABLE */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 4px;
+    font-size: 13px;
+  }
+
+  th, td {
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 11px 10px;
+    text-align: left;
+    vertical-align: top;
+    color: rgba(240,233,236,0.78);
+  }
+
+  th {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  td small { color: var(--muted); font-size: 11.5px; }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(196,164,107,0.35), transparent);
+    margin: 48px 0;
+  }
+
+  /* CONTACT */
+  .contact-box {
+    background: linear-gradient(135deg, rgba(93,75,95,0.35), rgba(201,169,154,0.08));
+    border: 1px solid rgba(196,164,107,0.22);
+    border-radius: 16px;
+    padding: 32px 28px;
+    text-align: center;
+  }
+
+  .contact-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .contact-box p {
+    font-size: 14px;
+    color: rgba(240,233,236,0.7);
+    margin-bottom: 18px;
+    line-height: 1.75;
+  }
+
+  .contact-email {
+    display: inline-block;
+    background: rgba(201,169,154,0.14);
+    border: 1px solid rgba(201,169,154,0.35);
+    border-radius: 30px;
+    padding: 11px 26px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--blush);
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .contact-email:hover { background: rgba(201,169,154,0.24); }
+
+  .responsible {
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 26px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+
+  footer span { color: var(--gold); }
+
+  @media (max-width: 600px) {
+    .header-title { font-size: 27px; }
+    .section-title { font-size: 21px; }
+    .section-body { padding: 20px 22px; }
+    main { padding: 32px 16px 60px; }
+    table { font-size: 12px; }
+    th, td { padding: 9px 7px; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="eyebrow">ESTILIA</div>
-  <h1>Aviso de Privacidad</h1>
-  <p>Última actualización: 2 de septiembre de 2026</p>
+  <div class="logo-name">Estilia</div>
+  <h1 class="header-title">Política de Privacidad</h1>
+  <p class="header-meta">Última actualización: <span>Septiembre 2026</span> · Desarrollado por <span>Gaswid</span></p>
 </header>
-<div class="bar"></div>
 
 <main>
 
-<p>Este Aviso de Privacidad describe cómo se recaban, usan, comparten y protegen
-los datos personales de las personas usuarias de la aplicación móvil
-<strong>EstilIA</strong>.</p>
+  <div class="intro-box">
+    <p>En <strong>EstilIA</strong> tratamos tu información con el mismo cuidado con el que te ayudamos a vestir. Esta política explica qué datos recopilamos, para qué los usamos, con quién los compartimos y cómo puedes controlarlos o eliminarlos. Al usar EstilIA aceptas las prácticas descritas en este documento.</p>
+  </div>
 
-<h2>1. Responsable del tratamiento</h2>
-<p>El responsable del tratamiento de sus datos personales es
-<strong>Allan Granillo</strong>, persona física que opera bajo la marca
-comercial <strong>Gaswid</strong>, con domicilio en el Estado de México, México.</p>
-<p>Para cualquier asunto relacionado con este aviso puede escribir a
-<a href="mailto:contacto@gaswid.com">contacto@gaswid.com</a>.</p>
+  <!-- 1 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <div class="section-title">Información que recopilamos</div>
+    </div>
+    <div class="section-body">
+      <p>Para que EstilIA funcione recopilamos lo siguiente:</p>
+      <ul>
+        <li><span class="highlight">Datos de tu cuenta:</span> al iniciar sesión con Google obtenemos tu nombre, correo electrónico, foto de perfil e identificador de cuenta. Nunca tenemos acceso a tu contraseña.</li>
+        <li><span class="highlight">Fotografías de tus prendas:</span> las imágenes que subes a tu clóset digital, junto con las características que se identifican en ellas.</li>
+        <li><span class="highlight">Perfil de estilo (opcional):</span> rango de edad, ocupación, estatura, talla, estilos preferidos y tipo de cuerpo.</li>
+        <li><span class="highlight">Contenido generado:</span> los looks que creas y el tipo de evento, lugar y horario que indicas al generarlos.</li>
+        <li><span class="highlight">Datos técnicos:</span> registros de uso y errores necesarios para operar el servicio.</li>
+      </ul>
+      <div class="note">
+        El perfil de estilo es <strong>enteramente opcional</strong>. La aplicación funciona sin él y puedes modificarlo o dejarlo vacío cuando quieras desde la sección Perfil.
+      </div>
+      <div class="note">
+        <span class="highlight-gold">No recopilamos</span> ubicación geográfica, contactos, calendario, micrófono ni datos de tu tarjeta. Los pagos se procesan íntegramente a través de Google Play.
+      </div>
+    </div>
+  </div>
 
-<h2>2. Datos personales que recabamos</h2>
+  <!-- 2 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <div class="section-title">Cómo usamos la información</div>
+    </div>
+    <div class="section-body">
+      <p>Tu información se usa exclusivamente para:</p>
+      <ul>
+        <li>Autenticar tu cuenta y mantener tu sesión activa</li>
+        <li>Almacenar y organizar tu guardarropa digital</li>
+        <li>Analizar tus fotografías para clasificar cada prenda</li>
+        <li>Generar recomendaciones de conjuntos y contenido de estilo</li>
+        <li>Administrar tu nivel de suscripción y sus límites de uso</li>
+        <li>Atender solicitudes de soporte y mejorar el servicio</li>
+      </ul>
+      <p><span class="highlight-gold">No vendemos ni compartimos</span> tu información con fines publicitarios o comerciales.</p>
+    </div>
+  </div>
 
-<h3>2.1 Datos de identificación</h3>
-<p>Al iniciar sesión con Google obtenemos su nombre, dirección de correo
-electrónico, fotografía de perfil e identificador único de cuenta. EstilIA
-<strong>no almacena ni tiene acceso a su contraseña de Google</strong>.</p>
+  <!-- 3 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <div class="section-title">Almacenamiento y terceros</div>
+    </div>
+    <div class="section-body">
+      <p>Para operar el servicio recurrimos a los siguientes proveedores, que actúan como encargados del tratamiento:</p>
 
-<h3>2.2 Fotografías de prendas</h3>
-<p>Las imágenes de prendas que usted carga se almacenan en nuestros servidores
-y se procesan para identificar características como categoría, tipo y color.</p>
+      <table>
+        <tr>
+          <th>Proveedor</th>
+          <th>Datos que recibe</th>
+          <th>Finalidad</th>
+        </tr>
+        <tr>
+          <td>Google Firebase<br><small>Google LLC, EE. UU.</small></td>
+          <td>Datos de cuenta, fotografías, perfil de estilo y looks</td>
+          <td>Autenticación, base de datos y almacenamiento</td>
+        </tr>
+        <tr>
+          <td>OpenAI<br><small>OpenAI, L.L.C., EE. UU.</small></td>
+          <td>Fotografías de prendas y datos del perfil de estilo</td>
+          <td>Clasificación de prendas y generación de recomendaciones</td>
+        </tr>
+        <tr>
+          <td>Google Play<br><small>Google LLC, EE. UU.</small></td>
+          <td>Datos de la transacción</td>
+          <td>Procesamiento de suscripciones</td>
+        </tr>
+      </table>
 
-<h3>2.3 Datos de perfil de estilo (opcionales)</h3>
-<p>Si decide completar su perfil, recabamos rango de edad, ocupación, estatura,
-talla de ropa, preferencias de estilo y tipo de cuerpo. Estos datos son
-<strong>enteramente opcionales</strong>: la aplicación funciona sin ellos, y
-usted puede modificarlos o eliminarlos en cualquier momento desde la sección
-Perfil.</p>
+      <div class="note">
+        <strong>Transferencias internacionales.</strong> Estos proveedores procesan y almacenan información en servidores fuera de México, principalmente en Estados Unidos. Al usar EstilIA consientes dicha transferencia, necesaria para prestar el servicio.
+      </div>
 
-<h3>2.4 Contenido generado</h3>
-<p>Los conjuntos de prendas (looks) que genera, junto con el tipo de evento,
-lugar y horario que indica al crearlos.</p>
+      <p style="margin-top:16px">Conservamos tu información mientras tu cuenta permanezca activa. Si solicitas su eliminación, los datos se borran de forma permanente en un plazo máximo de 30 días naturales.</p>
+    </div>
+  </div>
 
-<h3>2.5 Datos técnicos</h3>
-<p>Registros de uso y errores necesarios para operar el servicio y diagnosticar
-fallas.</p>
+  <!-- 4 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <div class="section-title">Eliminación de tu cuenta</div>
+    </div>
+    <div class="section-body">
+      <p>Puedes eliminar tu cuenta y toda la información asociada por cualquiera de estas vías:</p>
+      <ul>
+        <li>Desde la aplicación, en <span class="highlight">Perfil → Eliminar cuenta</span></li>
+        <li>Escribiendo a <span class="highlight">contacto@gaswid.com</span> desde el correo con el que te registraste</li>
+      </ul>
+      <p>Se eliminan tu cuenta, tus fotografías, tu perfil de estilo y todos los looks generados. <span class="highlight-gold">La eliminación es definitiva y no puede revertirse.</span></p>
+    </div>
+  </div>
 
-<div class="box">
-  <strong>No recabamos</strong> ubicación geográfica precisa, contactos,
-  calendario, micrófono, ni información de pago. Los pagos, cuando existan,
-  se procesan íntegramente a través de Google Play; nosotros no tenemos acceso
-  a los datos de su tarjeta.
-</div>
+  <!-- 5 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">05</div>
+      <div class="section-title">Tus derechos</div>
+    </div>
+    <div class="section-body">
+      <p>Conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, tienes derecho a:</p>
+      <ul>
+        <li><span class="highlight">Acceder</span> a los datos personales que tenemos sobre ti</li>
+        <li><span class="highlight">Rectificarlos</span> cuando sean inexactos o estén incompletos</li>
+        <li><span class="highlight">Cancelarlos</span> cuando consideres que no se requieren para las finalidades señaladas</li>
+        <li><span class="highlight">Oponerte</span> a su tratamiento para fines específicos</li>
+      </ul>
+      <p>También puedes revocar en cualquier momento el consentimiento que nos hayas otorgado. Para ejercer estos derechos escríbenos indicando tu solicitud y el correo con el que te registraste. Respondemos en un plazo máximo de 20 días hábiles.</p>
+    </div>
+  </div>
 
-<h2>3. Finalidades del tratamiento</h2>
-<ul>
-  <li>Autenticar su cuenta y mantener su sesión activa.</li>
-  <li>Almacenar y organizar su guardarropa digital.</li>
-  <li>Analizar las fotografías de sus prendas para clasificarlas.</li>
-  <li>Generar recomendaciones de conjuntos y contenido de estilo.</li>
-  <li>Administrar el nivel de suscripción y sus límites de uso.</li>
-  <li>Atender solicitudes de soporte y mejorar el servicio.</li>
-</ul>
-<p>No utilizamos sus datos con fines publicitarios ni los vendemos a terceros.</p>
+  <!-- 6 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">06</div>
+      <div class="section-title">Seguridad</div>
+    </div>
+    <div class="section-body">
+      <p>Aplicamos medidas técnicas y administrativas para proteger tu información:</p>
+      <ul>
+        <li>Toda la información viaja cifrada entre la aplicación y nuestros servidores</li>
+        <li>Las reglas de acceso restringen la lectura de tus datos únicamente a tu propia cuenta</li>
+        <li>La autenticación está delegada a Google; no almacenamos contraseñas</li>
+        <li>No almacenamos datos financieros de ningún tipo</li>
+      </ul>
+      <p>Ningún sistema es completamente infalible, por lo que no podemos garantizar seguridad absoluta.</p>
+    </div>
+  </div>
 
-<h2>4. Terceros con quienes compartimos datos</h2>
-<p>Para operar el servicio recurrimos a los siguientes proveedores, que actúan
-como encargados del tratamiento:</p>
+  <!-- 7 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">07</div>
+      <div class="section-title">Menores de edad</div>
+    </div>
+    <div class="section-body">
+      <p>EstilIA no está dirigida a personas menores de 13 años y no recopilamos intencionalmente sus datos. Si detectamos una cuenta correspondiente a una persona menor de esa edad, la eliminaremos.</p>
+      <p>Si eres padre, madre o tutor y consideras que se registró una cuenta de este tipo, contáctanos y la atenderemos de inmediato.</p>
+    </div>
+  </div>
 
-<table>
-  <tr>
-    <th>Proveedor</th>
-    <th>Datos que recibe</th>
-    <th>Finalidad</th>
-  </tr>
-  <tr>
-    <td>Google Firebase<br><small>(Google LLC, EE. UU.)</small></td>
-    <td>Datos de cuenta, fotografías de prendas, perfil de estilo y looks</td>
-    <td>Autenticación, base de datos y almacenamiento de archivos</td>
-  </tr>
-  <tr>
-    <td>OpenAI<br><small>(OpenAI, L.L.C., EE. UU.)</small></td>
-    <td>Fotografías de prendas y datos del perfil de estilo</td>
-    <td>Clasificación de prendas y generación de recomendaciones</td>
-  </tr>
-  <tr>
-    <td>Google Play<br><small>(Google LLC, EE. UU.)</small></td>
-    <td>Datos de la transacción</td>
-    <td>Procesamiento de suscripciones</td>
-  </tr>
-</table>
+  <!-- 8 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">08</div>
+      <div class="section-title">Cambios a esta política</div>
+    </div>
+    <div class="section-body">
+      <p>Podemos actualizar esta política ocasionalmente. Cualquier cambio se publicará en esta misma página con la fecha de actualización correspondiente, y cuando los cambios sean sustanciales te lo notificaremos dentro de la aplicación.</p>
+      <p>El uso continuado de EstilIA después de cualquier cambio constituye tu aceptación de la política actualizada.</p>
+    </div>
+  </div>
 
-<div class="box">
-  <strong>Transferencias internacionales.</strong> Los proveedores anteriores
-  procesan y almacenan información en servidores ubicados fuera de México,
-  principalmente en Estados Unidos. Al utilizar EstilIA usted consiente dicha
-  transferencia, la cual resulta necesaria para prestar el servicio.
-</div>
+  <div class="divider"></div>
 
-<h2>5. Conservación de los datos</h2>
-<p>Conservamos su información mientras su cuenta permanezca activa. Si solicita
-la eliminación de su cuenta, sus datos personales, fotografías y contenido
-generado se eliminan de forma permanente en un plazo máximo de 30 días
-naturales, salvo aquellos registros que debamos conservar por obligación legal.</p>
+  <!-- CONTACTO -->
+  <div class="contact-box">
+    <h3>¿Tienes preguntas?</h3>
+    <p>Si tienes dudas sobre esta política, quieres ejercer tus derechos o solicitar la eliminación de tu cuenta, escríbenos:</p>
+    <a href="mailto:contacto@gaswid.com" class="contact-email">contacto@gaswid.com</a>
 
-<h2>6. Eliminación de su cuenta y sus datos</h2>
-<p>Puede solicitar la eliminación de su cuenta y de toda la información asociada
-por cualquiera de estas vías:</p>
-<ul>
-  <li>Desde la aplicación, en <strong>Perfil → Eliminar cuenta</strong>.</li>
-  <li>Enviando un correo a
-      <a href="mailto:contacto@gaswid.com">contacto@gaswid.com</a> desde la
-      dirección con la que se registró.</li>
-</ul>
-<p>La eliminación es definitiva y no puede revertirse.</p>
-
-<h2>7. Derechos ARCO</h2>
-<p>Conforme a la Ley Federal de Protección de Datos Personales en Posesión de
-los Particulares, usted tiene derecho a <strong>acceder</strong> a sus datos
-personales, <strong>rectificarlos</strong> cuando sean inexactos,
-<strong>cancelarlos</strong> cuando considere que no se requieren para alguna
-de las finalidades señaladas, y <strong>oponerse</strong> a su tratamiento para
-fines específicos. También puede revocar el consentimiento otorgado.</p>
-<p>Para ejercer cualquiera de estos derechos escriba a
-<a href="mailto:contacto@gaswid.com">contacto@gaswid.com</a> indicando su
-nombre, el correo con el que se registró y la solicitud concreta. Responderemos
-en un plazo máximo de 20 días hábiles.</p>
-
-<h2>8. Seguridad</h2>
-<p>Aplicamos medidas técnicas y administrativas para proteger su información,
-incluyendo cifrado en tránsito, reglas de acceso que restringen la lectura de
-sus datos únicamente a su propia cuenta, y autenticación delegada a Google.
-Ningún sistema es completamente infalible, por lo que no podemos garantizar
-seguridad absoluta.</p>
-
-<h2>9. Menores de edad</h2>
-<p>EstilIA no está dirigida a personas menores de 13 años y no recabamos
-intencionalmente sus datos. Si tenemos conocimiento de que se registró una
-cuenta correspondiente a una persona menor de esa edad, la eliminaremos. Si
-usted es padre, madre o tutor y detecta esta situación, contáctenos.</p>
-
-<h2>10. Cambios a este aviso</h2>
-<p>Podemos actualizar este Aviso de Privacidad. Publicaremos la versión vigente
-en esta misma dirección, indicando la fecha de la última actualización. Cuando
-los cambios sean sustanciales, se lo notificaremos dentro de la aplicación.</p>
-
-<h2>11. Contacto</h2>
-<p>Dudas, solicitudes o reclamaciones relacionadas con el tratamiento de sus
-datos personales:<br>
-<a href="mailto:contacto@gaswid.com">contacto@gaswid.com</a></p>
+    <div class="responsible">
+      Responsable del tratamiento de datos personales:
+      <strong>Allan Geovanni Granillo Alvarez</strong>, persona física que opera bajo la
+      marca comercial <strong>Gaswid</strong>, con domicilio en el Estado de
+      México, México.
+    </div>
+  </div>
 
 </main>
 
 <footer>
-  EstilIA &middot; Gaswid &middot; México
+  © 2026 <span>GASWID</span> · ESTILIA · TODOS LOS DERECHOS RESERVADOS
 </footer>
 
 </body>
